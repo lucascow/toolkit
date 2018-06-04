@@ -1,7 +1,7 @@
 /*
  * A template to set up a simple server with Express.
  * How to run:
- * 		In terminal, type "node app.js". The server is running at port 3000
+ * 		Move to root folder of the project in terminal, type "npm install" then "node app.js". The server will be running at port 3000.
  */
 
 var express 	= require('express')
