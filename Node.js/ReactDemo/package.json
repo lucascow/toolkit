@@ -1,0 +1,43 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "init": "npm install",
+    "serve": "./node_modules/.bin/cross-env ENV_CONFIG=develoment ./node_modules/.bin/webpack-dev-server -d --config ./webpack.config.babel.js",
+    "buildDev": "./node_modules/.bin/cross-env ENV_CONFIG=develoment ./node_modules/.bin/webpack -d --config ./webpack.config.babel.js",
+    "buildProd": "./node_modules/.bin/cross-env ENV_CONFIG=production ./node_modules/.bin/webpack -p --config ./webpack.config.babel.js",
+    "//": [
+      "// Readme",
+      "//   1. based on https://webpack.js.org/api/cli/#shortcuts",
+      "//     -d is the shortcut of --debug --devtool cheap-module-eval-source-map --output-pathinfo",
+      "//     -p is the shortcut of --optimize-minimize --define process.env.NODE_ENV='production'; It will uglify the code as well",
+      "//   2. cross-env is a cli tool to ensure the cli parm work in Windows",
+      "//   3. webpack-dev-server & webpack cli tool also read the config from the file webpack.config.babel.js",
+      "//   4. --devtool is a flag to control source mapping. Source map(.map file) provides browsers with hints to recover the compressed code for debug"
+    ]
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "react-to-html-webpack-plugin": "^2.2.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0"
+  }
+}
