@@ -70,7 +70,7 @@ class SimpleQueryBuilder
 		if (stripos($this->sql, 'WHERE') == false)
 		    $this->sql .= " WHERE " . "$notNull is not null";
 		else
-			$this->sql .= " AND "	. "$notNull is not null";
+		    $this->sql .= " AND "	. "$notNull is not null";
 	}
 
 	public function orderBy($orderBy)
