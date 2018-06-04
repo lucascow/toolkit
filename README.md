@@ -1,2 +1,2 @@
 # toolkit
-A bundle of effective tools (Diff. Language)
+A bundle of effective tools (In Diff. Programming Language)
